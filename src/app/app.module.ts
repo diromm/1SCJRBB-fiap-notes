@@ -10,6 +10,8 @@ import { NoteComponent } from './views/pages/note/note.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './views/pages/login/login.component';
+import { ButtonModule } from 'primeng/button';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LoginComponent } from './views/pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

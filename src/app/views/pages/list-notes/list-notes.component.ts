@@ -43,4 +43,8 @@ export class ListNotesComponent implements OnInit {
       () => this.notes = this.notes.filter(note => note.id !== noteId)
     );
   }
+
+  putNote(noteToEdit: Note) {
+    this.noteService.notifyPutNoteClicked(noteToEdit);
+  }  
 }

@@ -8,13 +8,6 @@ import { Note } from 'src/app/services/@types/note';
 })
 export class NoteComponent implements OnInit {
 
-  // note = {
-  //   id: 1,
-  //   date: new Date(),
-  //   text: "Um texto qualquer",
-  //   urgert: false
-  // }
-
   @Input()
   noteProp = {} as Note;
 
@@ -24,6 +17,9 @@ export class NoteComponent implements OnInit {
   @Output()
   notify = new EventEmitter();
 
+  @Output()
+  notifyPut = new EventEmitter();  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -32,6 +28,10 @@ export class NoteComponent implements OnInit {
   confirmRemove(){
     if(confirm("Deseja realmente apagar?"))
       this.notify.emit();
+  }
+
+  putNote() {
+    this.notifyPut.emit();
   }
 
 }
